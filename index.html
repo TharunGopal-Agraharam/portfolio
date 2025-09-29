@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tharun Gopal Agraharam — Portfolio</title>
+  <meta name="description" content="Personal portfolio — projects, skills and contact. Built with only HTML & CSS." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f9fafb;
+      --text:#1f2937;
+      --muted:#4b5563;
+      --accent:#2563eb;
+      --card:#ffffff;
+      --radius:14px;
+      --max-width:1100px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .container{width:calc(100% - 48px);max-width:var(--max-width);margin:0 auto}
+
+    header{padding:24px 0;position:sticky;top:0;background:#fff;border-bottom:1px solid #e5e7eb;z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:700;font-size:18px;color:var(--accent)}
+    nav ul{list-style:none;display:flex;gap:18px;margin:0;padding:0}
+    nav li{font-weight:600;color:var(--muted);font-size:14px}
+    .cta{padding:10px 14px;border-radius:8px;background:var(--accent);color:#fff;font-weight:600;font-size:14px}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:40px;padding:64px 0;align-items:center}
+    .hero-left h1{font-size:36px;margin:0 0 12px;line-height:1.2}
+    .lead{color:var(--muted);font-size:16px;margin:0 0 20px}
+    .btn-row{display:flex;gap:12px}
+    .btn{padding:12px 16px;border-radius:8px;background:#e5e7eb;font-weight:600;color:var(--text)}
+    .btn:hover{background:#d1d5db}
+    .profile{height:320px;border-radius:12px;overflow:hidden;background:#dbeafe;display:flex;align-items:center;justify-content:center}
+    .profile img{width:100%;height:100%;object-fit:cover}
+
+    /* Sections */
+    section{padding:48px 0}
+    h2{margin:0 0 18px;font-size:24px;color:var(--accent)}
+    .grid{display:grid;gap:18px}
+
+    /* About */
+    .about{display:grid;grid-template-columns:1fr 300px;gap:28px}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .skill{background:#f3f4f6;padding:8px 12px;border-radius:6px;font-weight:600;color:var(--muted);font-size:14px}
+
+    /* Projects */
+    .projects-grid{grid-template-columns:repeat(3,1fr);}
+    .card{background:var(--card);padding:16px;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 2px 6px rgba(0,0,0,0.05)}
+    .card img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:12px}
+    .card h3{margin:0 0 8px}
+    .card p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+
+    /* Contact */
+    .contact{display:grid;grid-template-columns:1fr 320px;gap:28px}
+    form{display:flex;flex-direction:column;gap:12px}
+    input,textarea{background:#f9fafb;border:1px solid #d1d5db;padding:12px;border-radius:8px;color:var(--text);font-size:14px}
+    .submit{padding:12px;border-radius:8px;border:0;background:var(--accent);color:#fff;font-weight:600}
+
+    footer{padding:28px 0;color:var(--muted);font-size:14px;text-align:center}
+
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr}
+      .about{grid-template-columns:1fr}
+      .projects-grid{grid-template-columns:repeat(2,1fr)}
+      .contact{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .nav{flex-direction:column;gap:14px}
+      nav ul{flex-wrap:wrap;justify-content:center}
+      .projects-grid{grid-template-columns:1fr}
+      .hero-left h1{font-size:28px}
+      .profile{height:220px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Tharun Gopal Agraharam</div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="cta" href="#projects">My Work</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Hello, I'm Tharun Gopal Agraharam 👋</h1>
+        <p class="lead">I enjoy building clean, simple, and useful web experiences. My focus is on making things that not only look good but also work smoothly. I love turning ideas into real projects that help people.</p>
+        <div class="btn-row">
+          <a class="btn" href="#projects">See My Projects</a>
+          <a class="btn" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="profile">
+        <img src="https://via.placeholder.com/400x400?text=Your+Photo" alt="Your photo" />
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <div>
+          <h2>About Me</h2>
+          <p style="color:var(--muted);margin-bottom:12px">I'm a curious learner and developer who likes exploring how technology can solve everyday problems. I’ve worked on small web apps, dashboards, and ML prototypes. My goal is always to make things simple, useful, and easy to use.</p>
+
+          <h3 style="margin-bottom:8px">Skills</h3>
+          <div class="skills">
+            <div class="skill">Machine Learning</div>
+            <div class="skill">Deep Learning</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Python (ML)</div>
+            <div class="skill">Java</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>A Few Things About Me</h3>
+          <p style="margin-top:8px;color:var(--muted);font-size:14px">• I enjoy building and sharing projects<br>• Always learning something new<br>• Open to collaborations and freelance opportunities</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid projects-grid">
+        <article class="card">
+          <img src="https://via.placeholder.com/600x360?text=Project+1" alt="Project 1 screenshot" />
+          <h3>Real-time Car Accident Detection and Emergency Response using Enhanced YOLO</h3>
+          <p>A project aimed at enhancing public safety by utilizing modern AI techniques<br>
+Developed a real-time car accident detection and emergency alert system using an enhanced YOLO model to analyze live dashcam and CCTV video streams
+</p>
+        </article>
+
+        <article class="card">
+          <img src="https://via.placeholder.com/600x360?text=Project+2" alt="Project 2 screenshot" />
+          <h3>Sentiment Analysis Tool</h3>
+          <p>Developed a sentiment analysis tool using NLP and machine learning techniques to classify text data</p>
+        </article>
+
+        <article class="card">
+          <img src="https://via.placeholder.com/600x360?text=Project+3" alt="Project 3 screenshot" />
+          <h3>Image Classification Model</h3>
+          <p>Developed and trained image classification model on the CIFAR-10 dataset using TensorFlow and Keras, improving model accuracy through data augmentation</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact">
+        <div>
+          <p style="color:var(--muted)">I’d love to hear from you! Drop me a quick message here or email me directly if you prefer.</p>
+          <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <textarea name="message" rows="6" placeholder="Your message" required></textarea>
+            <button class="submit" type="submit">Send</button>
+          </form>
+        </div>
+
+        <aside class="card">
+          <h3>Find Me Online</h3>
+          <p style="margin:4px 0"><strong>GitHub:</strong> <a href="#">github.com/TharunGopalAgraharam</a></p>
+          <p style="margin:4px 0"><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/tharungopalagraharam</a></p>
+          <p style="margin:4px 0"><strong>Email:</strong>agraharamtharun@gmail.com</p>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div>© Tharun Gopal Agraharam — Portfolio using only HTML & CSS</div>
+    </footer>
+  </main>
+</body>
+</html>
